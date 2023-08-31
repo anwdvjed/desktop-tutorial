@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .container {
+            text-align: center;
+            color: aliceblue;
+            padding-top: 100px;
+        }
+        .input-field {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button {
+            background-color: #3498db;
+            margin-right: 10px;
+        }
+        .register-button {
+            background-color: #e74c3c;
+        }
+    </style>
+    <script>
+        function goToRegistration() {
+            // 跳转到注册页面
+            window.location.href = "{% static 'log/resgrist.html' %}"; // 替换为您的注册页面的文件名
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>请输入您的账号密码</h1>
+        <div class="input-field">
+            <input type="text" name="username" id="username" placeholder="用户名">
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="密码">
+        </div>
+        <div class="input-field">
+            <input type="button" class="button login-button" value="登录">
+            <input type="button" class="button register-button" value="注册" onclick="goToRegistration()">
+        </div>
+    </div>
+</body>
+</html>
+
